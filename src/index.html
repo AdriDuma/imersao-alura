@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Imersão</title>
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/vars.css">
+    <link rel="stylesheet" href="./src/styles/window.css">
+    <link rel="stylesheet" href="./src/styles/sidebar-footer.css" />
+    <link rel="stylesheet" href="./src/styles/main-content.css">
+    <link rel="stylesheet" href="./src/styles/media-queries.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <nav class="sidebar__navigation">
+                <div class="logo">
+                    <a href="">
+                        <img src="./src/assets/icons/logo-spotify.png" alt="logo do spotify">
+                    </a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="">
+                            <span class="fa fa-home"></span>
+                            <span>Início</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="fa fa-search"></span>
+                            <span>Buscar</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar__library">
+                <div class="header">
+                    <div class="title">
+                        <a href="">
+                            <span class="fa fa-book"></span>
+                            <span>Sua Biblioteca</span>
+                        </a>
+                    </div>
+                    <span class="new">
+                        <button><span class="fa fa-plus"></span></button>
+                    </span>
+                </div>
+                <div class="suggestion-card">
+                    <h1>
+                        Crie sua primeira playlist
+                    </h1>
+                    <span>
+                        É fácil, vamos te ajudar.
+                    </span>
+                    <span>
+                        <button>
+                            Criar playlist
+                        </button>
+                    </span>
+                </div>
+                <div class="suggestion-card">
+                    <h1>
+                        Que tal seguir um podcast novo?
+                    </h1>
+                    <span>
+                        Avisaremos você sobre novos episódios.
+                    </span>
+                    <span>
+                        <button>
+                            Explore podcasts
+                        </button>
+                    </span>
+                </div>
+                <div class="cookies">
+                    <span><a href="">Cookies</a></span>
+                </div>
+                <div class="languages">
+                    <button>
+                        <span class="fa fa-globe"></span>
+                        <span>Português do Brasil</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <div class="main-container">
+                <nav class="header">
+                    <div class="header__navigation">
+                        <button class="arrow-left">
+                            <img src="./src/assets/icons/small-left.png" alt="seta esquerda">
+                        </button>
+                        <button class="arrow-right">
+                            <img src="./src/assets/icons/small-right.png" alt="seta direita">
+                        </button>
+                    </div>
+
+                    <div class="header__search">
+                        <img src="./src/assets/icons/search.png" alt="">
+                        <input type="text" name="search-input" id="search-input" maxlength="800"
+                            placeholder="O que você quer ouvir?" />
+                    </div>
+
+                    <div class="header__login">
+                        <button class="subscribe">Inscreva-se</button>
+                        <button class="login">Entrar</button>
+                    </div>
+                </nav>
+
+                <div id="result-artist" class="hidden">
+                    <div class="grid-container">
+                        <div class="artist-card" id="">
+                            <div class="card-img">
+                                <img id="artist-img" class="artist-img" />
+                                <div class="play">
+                                    <span class="fa fa-solid fa-play"></span>
+                                </div>
+                            </div>
+                            <div class="card-text">
+                                <a title="Foo Fighters" class="vst" href=""></a>
+                                <span class="artist-name" id="artist-name"></span>
+                                <span class="artist-categorie">Artista</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-content" id="result-playlists">
+                    <h1 class="greetings">Boa tarde</h1>
+                    <section class="categories-navigation">
+                        <h2 class="title">Navegar por todas as seções</h2>
+                        <div class="categories">
+                            <div class="category bg-holidays">
+                                <span class="category__title">Boas festas</span>
+                                <img src="./src/assets/playlist/1.jpeg" alt="">
+                            </div>
+                            <div class="category bg-made-for-you">
+                                <span class="category__title">Feitos para você</span>
+                                <img src="./src/assets/playlist/2.png" alt="">
+                            </div>
+                            <div class="category bg-new-releases">
+                                <span class="category__title">Lançamentos</span>
+                                <img src="./src/assets/playlist/3.jpeg" alt="">
+                            </div>
+                            <div class="category bg-creators">
+                                <span class="category__title">Creators</span>
+                                <img src="./src/assets/playlist/4.jpeg" alt="">
+                            </div>
+                            <div class="category bg-workout">
+                                <span class="category__title">Para treinar</span>
+                                <img src="./src/assets/playlist/5.jpeg" alt="">
+                            </div>
+                            <div class="category bg-podcasts">
+                                <span class="category__title">Podcasts</span>
+                                <img src="./src/assets/playlist/6.jpeg" alt="">
+                            </div>
+                            <div class="category bg-sertanejo">
+                                <span class="category__title">Sertanejo</span>
+                                <img src="./src/assets/playlist/7.jpeg" alt="">
+                            </div>
+                            <div class="category bg-samba-pagode">
+                                <span class="category__title">Samba e pagode</span>
+                                <img src="./src/assets/playlist/8.jpeg" alt="">
+                            </div>
+                            <div class="category bg-funk">
+                                <span class="category__title">Funk</span>
+                                <img src="./src/assets/playlist/9.jpeg" alt="">
+                            </div>
+                            <div class="category bg-mpb">
+                                <span class="category__title">MPB</span>
+                                <img src="./src/assets/playlist/10.jpeg" alt="">
+                            </div>
+                            <div class="category bg-rock">
+                                <span class="category__title">Rock</span>
+                                <img src="./src/assets/playlist/11.jpeg" alt="">
+                            </div>
+                            <div class="category bg-hip-hp">
+                                <span class="category__title">Hip-hop</span>
+                                <img src="./src/assets/playlist/12.jpeg" alt="">
+                            </div>
+                            <div class="category bg-indie">
+                                <span class="category__title">Indie</span>
+                                <img src="./src/assets/playlist/13.jpeg" alt="">
+                            </div>
+                            <div class="category bg-relax">
+                                <span class="category__title">Relax</span>
+                                <img src="./src/assets/playlist/14.jpeg" alt="">
+                            </div>
+                            <div class="category bg-latin">
+                                <span class="category__title">Música latina</span>
+                                <img src="./src/assets/playlist/15.jpeg" alt="">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer class="disclaimer-premium">
+            <div class="text">
+                <p class="disclaimer-premium__title">Testar o Premium de graça</p>
+                <p class="disclaimer-premium__subtitle">Inscreva-se para curtir música ilimitada e podcasts só com
+                    alguns anúncios. Não
+                    precisa de cartão de crédito.</p>
+            </div>
+            <button>Inscreva-se grátis</button>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="./script.js"></script>
+
+</body>
+
+</html>
